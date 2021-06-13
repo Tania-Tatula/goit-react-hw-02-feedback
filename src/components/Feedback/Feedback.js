@@ -38,13 +38,12 @@ class Feedback extends Component {
     return positiveFeedback;
   }
 
-  onLeaveFeedback =(evt) => {
+  onLeaveFeedback = (evt) => {
     const name = evt.target.name;
-		this.setState((prevState) => ({
-			[name]: prevState[name] + 1
-		}));
-  }
-
+    this.setState((prevState) => ({
+      [name]: prevState[name] + 1,
+    }));
+  };
 
   render() {
     const objKey = Object.keys(this.state);
@@ -54,7 +53,8 @@ class Feedback extends Component {
         <h1 className={styles.title}>Please leave feedback</h1>
 
         <FeedbackOptions
-        options={objKey} onLeaveFeedback={this.onLeaveFeedback}
+          options={objKey}
+          onLeaveFeedback={this.onLeaveFeedback}
           // handleGoodFeedback={this.handleGoodFeedback}
           // handleNeutralFeedback={this.handleNeutralFeedback}
           // handleBadFeedback={this.handleBadFeedback}
