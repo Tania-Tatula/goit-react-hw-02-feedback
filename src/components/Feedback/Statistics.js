@@ -1,5 +1,7 @@
 import React from "react";
 import styles from "./Feedback.module.css";
+import PropTypes from 'prop-types';
+
 
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => (
   <>
@@ -11,5 +13,13 @@ const Statistics = ({ good, neutral, bad, total, positivePercentage }) => (
     <span className={styles.info}>Positive feedback:{positivePercentage}%</span>
   </>
 );
+
+Notification.propTypes = {
+  good: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  total: PropTypes.func.isRequired,
+  positivePercentage: PropTypes.func.isRequired,
+}
 
 export default Statistics;
