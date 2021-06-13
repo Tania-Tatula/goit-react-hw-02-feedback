@@ -11,21 +11,21 @@ class Feedback extends Component {
     bad: 0,
   };
 
-  handleGoodFeedback = () => {
-    this.setState((prevState) => ({
-      good: prevState.good + 1,
-    }));
-  };
-  handleNeutralFeedback = () => {
-    this.setState((prevState) => ({
-      neutral: prevState.neutral + 1,
-    }));
-  };
-  handleBadFeedback = () => {
-    this.setState((prevState) => ({
-      bad: prevState.bad + 1,
-    }));
-  };
+  // handleGoodFeedback = () => {
+  //   this.setState((prevState) => ({
+  //     good: prevState.good + 1,
+  //   }));
+  // };
+  // handleNeutralFeedback = () => {
+  //   this.setState((prevState) => ({
+  //     neutral: prevState.neutral + 1,
+  //   }));
+  // };
+  // handleBadFeedback = () => {
+  //   this.setState((prevState) => ({
+  //     bad: prevState.bad + 1,
+  //   }));
+  // };
 
   countTotalFeedback() {
     let total = this.state.good + this.state.neutral + this.state.bad;
