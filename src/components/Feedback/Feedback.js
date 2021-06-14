@@ -28,14 +28,12 @@ class Feedback extends Component {
   // };
 
   countTotalFeedback() {
-    let total = this.state.good + this.state.neutral + this.state.bad;
-    return total;
+    return this.state.good + this.state.neutral + this.state.bad;
   }
 
   countPositiveFeedbackPercentage() {
     let total = this.countTotalFeedback();
-    let positiveFeedback = ((this.state.good * 100) / total).toFixed();
-    return positiveFeedback;
+    return ((this.state.good * 100) / total).toFixed();
   }
 
   onLeaveFeedback = (evt) => {
